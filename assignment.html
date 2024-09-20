@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Onject</title>
+</head>
+<body>
+    <script>
+        const robot = {
+            name: "SASSY 2.0 ",
+            manufacturer: "OURANTECH COMPANY", 
+
+            skillset:{
+                skill1: "research",
+                skill2: "communicate",
+                skill3: "painting"
+            },
+            
+            RobertSkill : function(skill){
+
+                if (this.skillset.skill1 === skill){
+                    return (true);
+                }
+
+                else if (this.skillset.skill2 === skill){
+                    return (true);
+                }
+
+                else if (this.skillset.skill3 === skill){
+                return (true);
+                }
+
+                else {
+                    return (false);
+                }
+            }
+
+        };
+
+        console.log("Robert Name: "+robot.name);
+        console.log("Manufactuer: "+ robot.manufacturer);
+
+        // Display the robot's skills
+        console.log("Skillset: " + Object.values(robot.skillset).join(", "));
+
+        // Check if the robot has a specific skill
+        let skillToCheck = "painting";
+        console.log(`Does the robot have the skill '${skillToCheck}'? ` + robot.RobertSkill(skillToCheck));
+
+        skillToCheck = "coding";
+        console.log(`Does the robot have the skill '${skillToCheck}'? ` + robot.RobertSkill(skillToCheck));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+</head>
+<body>
+    <script>
+        const movie = {
+            title: "Gone With The Wind",
+            year: 1939,
+            actressLead: "Vivien Leigh",
+            actorLead: "Clark Gable",
+            genre: "Epic",
+            academyAwards: 8,
+            quote: "Frankly, my dear, I don't give a damn", // Fixed quote for clarity
+
+            leadingRole: function(role) {
+                return this[role];
+            },
+
+            formatInfo: function() {
+                return `${this.title} was released in ${this.year}. It tells the story of the civil war in the US`;
+            }
+        };
+
+        movie.profits = {
+            yearOfRelease: 10,
+            subsequentToDate: 40
+        };
+
+        console.log(movie);
+        console.log("Most famous quote from the movie: " + movie.quote);
+
+        let role = movie.leadingRole("actorLead");
+        console.log("Leading role: " + role);
+
+        let roleWithMostVotes = "actorLead";
+        console.log("Role with most votes is: " + movie.leadingRole(roleWithMostVotes));
+
+        console.log("Profits in the year of release: " + movie.profits.yearOfRelease);
+        console.log("Profits subsequent to date: " + movie.profits.subsequentToDate); // Added for completeness
+    </script>
+</body>
+</html>
